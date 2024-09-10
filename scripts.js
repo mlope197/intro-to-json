@@ -60,7 +60,7 @@ function displayPhotos(json){
     for(let photo of json){
         // TO DO
         output += `
-            <img src="${photo.url}" alt="" width="${"photo.width"}" height="${"photo.height"}">
+            <img src="${photo.url}" alt="" width="${photo.width}" height="${photo.height}">
         `;
 
     }
