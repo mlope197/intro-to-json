@@ -72,6 +72,14 @@ function displayPhotos(json){
 function getUsers(data){
     console.log('This is our user data from the file: ', data);
     // TO DO - ADD USER INFO TO PAGE
+    /*
+        for each user:
+        -name (h3)
+        -username (p)
+        -img (large) (img)
+        -birthday (month, day, year) (p)
+        -email address (as a clickable link) (a)
+    */
 }
 
 // call the function to display the cat photos on page load
