@@ -80,6 +80,20 @@ function getUsers(data){
         -birthday (month, day, year) (p)
         -email address (as a clickable link) (a)
     */
+    let birthday;
+    let output = "";
+
+    for(let user of data.results){
+        console.log(data.results);
+        output += `<section>
+                        <h3></h3>
+                        <p>Username: </p>
+                        <img src="" alt="" width="160" height="160>
+                        <p>Birthday: </p>'
+                        <a href="mailto:"></a>
+                   </section>`;     
+    }
+    outputDiv.innerHTML = output;
 }
 
 // call the function to display the cat photos on page load
