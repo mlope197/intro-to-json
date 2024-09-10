@@ -84,13 +84,14 @@ function getUsers(data){
     let output = "";
 
     for(let user of data.results){
-        console.log(data.results);
+        console.log(user);
+        birthday = new Date(user.dob.date);
         output += `<section>
-                        <h3></h3>
-                        <p>Username: </p>
-                        <img src="" alt="" width="160" height="160>
-                        <p>Birthday: </p>'
-                        <a href="mailto:"></a>
+                        <h3>${users.name.first} ${user.name.last}</h3>
+                        <p>Username: ${user.login.username}</p>
+                        <img src="${user.picture.large}" alt="" width="160" height="160">
+                        <p>Birthday: ${birthday,getMonth()} - ${birthday.getDate()} - ${birthday.getFullYear()}</p>'
+                        <a href="mailto:${user.email}">${user.email}</a>
                    </section>`;     
     }
     outputDiv.innerHTML = output;
