@@ -60,7 +60,7 @@ function displayPhotos(json){
     for(let photo of json){
         // TO DO
         output += `
-            <img src="${"add image url here"}" alt="" width="${"add image width here"}" height="${"add image height here"}">
+            <img src="${photo.url}" alt="" width="${"photo.width"}" height="${"photo.height"}">
         `;
 
     }
@@ -87,14 +87,14 @@ function getUsers(data){
         console.log(user);
         birthday = new Date(user.dob.date);
         output += `<section>
-                        <h3>${users.name.first} ${user.name.last}</h3>
+                        <h3>${user.name.first} ${user.name.last}</h3>
                         <p>Username: ${user.login.username}</p>
                         <img src="${user.picture.large}" alt="" width="160" height="160">
-                        <p>Birthday: ${birthday,getMonth()} - ${birthday.getDate()} - ${birthday.getFullYear()}</p>'
+                        <p>Birthday: ${birthday.getMonth() + 1} - ${birthday.getDate()} - ${birthday.getFullYear()}</p>'
                         <a href="mailto:${user.email}">${user.email}</a>
                    </section>`;     
     }
-    outputDiv.innerHTML = output;
+    document.getElementById("users").innerHTML = output;
 }
 
 // call the function to display the cat photos on page load
