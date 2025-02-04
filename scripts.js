@@ -81,6 +81,7 @@ function getUsers(data){
         -email address (as a clickable link) (a)
     */
     let birthday;
+    const outputDiv = document.getElementById("users");
     let output = "";
 
     for(let user of data.results){
@@ -95,7 +96,9 @@ function getUsers(data){
                    </section>`;     
     }
     document.getElementById("users").innerHTML = output;
+    outputDiv.innerHTML = output;
 }
+
 
 // call the function to display the cat photos on page load
 // the window.onload handler is where we can attach event handlers 
